@@ -1,13 +1,12 @@
 import React from 'react';
-import Card_Container from "./Card_Container";
-import Card from 'react-bootstrap/Card';
+import Card_Container from "../Components/Card_Container";
 import CardGroup from 'react-bootstrap/CardGroup';
 
-import Deck1 from "../Assets/Deck1.jpg";
-import Deck2 from "../Assets/Deck2.jpg";
-import Deck3 from "../Assets/Deck3.jpg";
+import Deck1 from "../Assets/LandyYachtz_WolfShark.jpg";
+import Deck2 from "../Assets/LandyYachtz_ Crane.jpg";
+import Deck3 from "../Assets/LandyYachtz_SwitchBlade.jpg";
 
-const Cards = () => {
+const Boards = () => {
   const cardData = [
     {
         imgSrc: Deck1,
@@ -42,4 +41,4 @@ const Cards = () => {
   )
 }
 
-export default Cards
+export default Boards

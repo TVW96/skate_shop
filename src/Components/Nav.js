@@ -5,6 +5,7 @@ import Stack from 'react-bootstrap/Stack';
 import Container from "react-bootstrap/Container";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Nav from 'react-bootstrap/Nav';
 import "./Nav.scss";
 
 
@@ -13,27 +14,33 @@ import Logo from "../Assets/skate-logo.png";
 
 function nav() {
   return (
-    <nav>
+    <Nav justify variant="tabs" defaultActiveKey="/home" className="nav">
       <Container fluid>
         {/* Row 1 of my top navigation */}
         <Row className="align-items-md-center">
           <Col>
             <Stack direction="horizontal" gap={1}>
               <img src={Logo} className="logo" alt="logo" />
-              <h1>Board Shop</h1>
+              <h1>The Board Shop</h1>
             </Stack>
           </Col>
           <Col>
             <Stack direction="horizontal" gap={3}>
-            <Form.Control className="me-auto" placeholder="search for item here..." />
+            <Form.Control style={{ width: '100%'}} placeholder="search for item here..." />
             <Button variant="secondary">Search</Button>
             </Stack>
           </Col>
           <Col>
             <Stack direction="horizontal" gap={3}>
-              <div className='p-2'>list item</div>
-              <div className='p-2'>list item</div>
-              <div className='p-2'>list item</div>
+              <Nav.Item>
+                <Nav.Link href="/">Home</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link href="/produdcts">Products</Nav.Link>
+              </Nav.Item>
+              <Nav.Item>
+                <Nav.Link href="/contact">Contact</Nav.Link>
+              </Nav.Item>
             </Stack>
           </Col>
         </Row>
@@ -46,11 +53,8 @@ function nav() {
             <p>$99</p>
           </Col>
         </Row>
-
       </Container>
-
-
-    </nav>
+    </Nav>
   )
 }
 

@@ -1,25 +1,35 @@
-import React from 'react'
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import React from 'react';
+import { Card, Button, Container, Row, Col } from 'react-bootstrap';
 
-import Deck1 from "../Assets/Deck1.jpg";
+const Card_Container = ({ cards }) => {
+    return (
+        <Container className="my-4">
+            <Row>
+                {cards.map((card, index) => (
+                    <Col key={index} md={4} className="mb-4">
+                        <Card style={{ padding: "10px", display: "flex", flexDirection: "column", height: "100%" }}>
+                            <Card.Img variant="top" src={card.imgSrc} className="card-img" 
+                            style={{
+                              width: "100%",
+                              height: "200px",
+                              objectFit: "cover"
+                             }}
+                            />
+                            <Card.Body>
+                                <Card.Title>{card.title}</Card.Title>
+                                <Card.Text>
+                                    {card.description}
+                                </Card.Text>
+                                <Button variant="primary" href={card.buttonLink}>
+                                    {card.buttonText}
+                                </Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                ))}
+            </Row>
+        </Container>
+    );
+};
 
-function Card_Container() {
-  return (
-    <div className="d-flex justify-content-around">
-        <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={Deck1} />
-            <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-        </Card>
-    </div>
-  )
-}
-
-export default Card_Container
+export default Card_Container;
