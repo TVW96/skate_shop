@@ -5,5 +5,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  @font-face {
+    font-family: fira-code;
+    src: url(~/Library/Fonts/FiraCode-Medium.ttf);
+  }
+  @font-face {
+    font-family: permanent-marker;
+    src: url(~/Library/Fonts/PermanentMarker-Regular.ttf)
+  }
 }
 
