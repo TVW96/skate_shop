@@ -4,16 +4,26 @@ import './ShopNav.scss'; // Import your CSS file
 
 const ShopNav = () => {
     const [navHeight, setNavHeight] = useState(window.innerHeight - 140); // Initial height
+    const [navTop, setNavTop] = useState(window.innerHeight - 140);
 
     const handleScroll = () => {
         // Get the height of the viewport and the scroll position
         const viewportHeight = window.innerHeight;
         const scrollTop = window.scrollY;
-        const topNavHeight = 140; // Height of the top navigation bar
 
         // Calculate the height of the sidebar based on scroll position
-        const newHeight = Math.max(viewportHeight - (scrollTop - topNavHeight), viewportHeight - topNavHeight);
-        setNavHeight(newHeight);
+        const newHeight = viewportHeight + scrollTop;
+        const navTop = 140 - scrollTop;
+        let varTop = navTop;
+        if (varTop < 0 ) {
+            varTop = 0;
+        }
+        let varHeight = newHeight;
+        if (varHeight > viewportHeight) {
+            varHeight = viewportHeight;
+        };
+        setNavHeight(varHeight);
+        setNavTop(varTop);
     };
 
     useEffect(() => {
@@ -30,7 +40,7 @@ const ShopNav = () => {
     }, []);
 
     return (
-        <div className="shop-nav" style={{ top: '140px', height: `${navHeight}px` }}>
+        <div className="shop-nav" style={{ top: `${navTop}px`, height:`${navHeight}px` }}>
             <h2 className="nav-title">Products</h2>
             <Accordion>
                 <Accordion.Item eventKey="0">
