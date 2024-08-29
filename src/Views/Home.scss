@@ -7,6 +7,8 @@
 
 .Home {
 
+
+
     h1 {
         font-size: 36px;
     }
@@ -68,8 +70,37 @@
 }
 
 @media (max-width: 767px) {
+
+    @keyframes kickPushMove {
+        0% {
+            transform: translate(430px, -80px);
+        }
+
+        10% {
+            transform: translate(380px, -50px) rotate(-30deg);
+        }
+
+        20% {
+            transform: translate(300px, 0px) rotate(0deg);
+        }
+
+        100% {
+            transform: translate(0px, 0px);
+        }
+    }
+
+    .Hero {
+        width: 430px;
+        overflow: -moz-hidden-unscrollable;
+    }
+
     .Home {
+        .Hero {
+            width: 430px;
+        }
+
         max-width: 430px;
+        overflow: -moz-hidden-unscrollable;
 
         h1 {
             font-size: 36px;
@@ -78,7 +109,7 @@
 
     .board-icon {
         width: 100px;
-        animation: kickPushMove 4.5s linear infinite reverse;
+        animation: kickPushMove 3.5s linear infinite reverse;
         z-index: 100;
     }
 
@@ -88,7 +119,7 @@
 
     .ramp-icon-right {
         width: 100px;
-        transform: translateY(-80px) translateX(50px);
+        transform: translateY(-80px) translateX(10px);
         z-index: -110;
         position: absolute;
         right: 0;
