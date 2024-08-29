@@ -1,24 +1,96 @@
+.Hero {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
 .Home {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+
+    h1 {
+        font-size: 36px;
+    }
 }
 
-h1 {
-    font-family: fira-code;
-    display: flex;
-    justify-content: center;
+.board-icon {
+    width: 200px;
+    animation: kickPushMove 3.5s linear infinite reverse;
+    z-index: 100;
 }
 
-h2 {
-    font-family: fira-code;
-    font-size: 24px;
-    display: flex;
-    justify-content: center;
+.ramp-icon-left {
+    transform: rotateY(180deg) translateX(20px) translateY(28px);
+    z-index: -100;
 }
 
-.shop-page {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+.ramp-icon-right {
+    transform: translateY(38px);
+    z-index: -110;
+    position: absolute;
+    right: 0;
+}
+
+
+
+@keyframes kickPushMove {
+    0% {
+        transform: translate(750px, -80px);
+    }
+
+    25% {
+        transform:
+            translate(380px, 0px) rotate(-30deg);
+    }
+
+    30% {
+        transform: translate(330px, 0px) rotate(0deg);
+    }
+
+    70% {
+        transform:
+            translate(-430px, 0px) rotate(0deg);
+    }
+
+    80% {
+        transform:
+            translate(-530px, 0px) rotate(10deg);
+    }
+
+    85% {
+        transform:
+            translate(-550px, 0px) rotate(30deg);
+    }
+
+    100% {
+        transform: translate(-850px, -80px);
+    }
+
+}
+
+@media (max-width: 767px) {
+    .Home {
+        max-width: 430px;
+
+        h1 {
+            font-size: 36px;
+        }
+    }
+
+    .board-icon {
+        width: 100px;
+        animation: kickPushMove 2.5s linear infinite reverse;
+        z-index: 100;
+    }
+
+    .ramp-icon-left {
+        display: none;
+    }
+
+    .ramp-icon-right {
+        width: 100px;
+        transform: translateY(-80px) translateX(50px);
+        z-index: -110;
+        position: absolute;
+        right: 0;
+    }
 }

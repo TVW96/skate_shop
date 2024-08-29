@@ -14,22 +14,22 @@ const Footer = () => {
                     <Col md={4} className="mb-3 mb-md-0">
                         <h5>Quick Links</h5>
                         <Nav className="flex-column">
-                            <Nav.Link href="#home" className="text-light">Home</Nav.Link>
-                            <Nav.Link href="#products" className="text-light">Products</Nav.Link>
-                            <Nav.Link href="#contact" className="text-light">Contact</Nav.Link>
+                            <Nav.Link href="/" className="text-light">Home</Nav.Link>
+                            <Nav.Link href="/products" className="text-light">Products</Nav.Link>
+                            <Nav.Link href="/contact" className="text-light">Contact</Nav.Link>
                         </Nav>
                     </Col>
                     <Col md={4}>
                         <h5>Follow Us</h5>
                         <div>
                             <a href="https://facebook.com" className="text-light me-3" aria-label="Facebook">
-                                <img src="" alt="" className=''/>
+                                <img src="" alt="" className='' />
                             </a>
                             <a href="https://twitter.com" className="text-light me-3" aria-label="Twitter">
-                                <img src="" alt="" className=''/>
+                                <img src="" alt="" className='' />
                             </a>
                             <a href="https://instagram.com" className="text-light" aria-label="Instagram">
-                                <img src="" alt="" className=''/>
+                                <img src="" alt="" className='' />
                             </a>
                         </div>
                     </Col>

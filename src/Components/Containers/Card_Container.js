@@ -12,7 +12,7 @@ const Card_Container = ({ cards }) => {
                             style={{
                               width: "100%",
                               height: "200px",
-                              objectFit: "cover"
+                              objectFit: "contain"
                              }}
                             />
                             <Card.Body>

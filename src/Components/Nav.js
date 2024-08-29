@@ -26,8 +26,8 @@ function nav() {
           </Col>
           <Col>
             <Stack direction="horizontal" gap={3}>
-            <Form.Control style={{ width: '100%'}} placeholder="search for item here..." />
-            <Button variant="secondary">Search</Button>
+              <Form.Control style={{ width: '100%' }} placeholder="search for item here..." />
+              <Button variant="secondary">Search</Button>
             </Stack>
           </Col>
           <Col>
@@ -36,7 +36,7 @@ function nav() {
                 <Nav.Link href="/">Home</Nav.Link>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link href="/produdcts">Products</Nav.Link>
+                <Nav.Link href="/products">Products</Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link href="/contact">Contact</Nav.Link>
@@ -47,10 +47,7 @@ function nav() {
         {/* Row 2 of top navigation */}
         <Row className="justify-content-md-center">
           <Col md="auto">
-            <p>Free shipping for orders over</p>
-          </Col>
-          <Col md="auto">
-            <p>$99</p>
+            <p>Free shipping for orders over $99</p>
           </Col>
         </Row>
       </Container>

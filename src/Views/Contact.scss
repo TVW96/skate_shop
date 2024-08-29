@@ -1,0 +1,59 @@
+.Contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    h1 {
+        font-size: 56px;
+        font-family: fira-code;
+    }
+
+    .contact-desc {
+        display: flex;
+        justify-content: center;
+        font-family: permanent-marker;
+        font-size: 36px;
+    }
+
+    .coffee {
+        display: flex;
+        justify-content: center;
+        font-family: fira-code;
+        font-size: 24px;
+        align-items: center;
+
+        p {
+            padding: 0;
+            margin: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .Contact {
+        .contact-desc {
+            display: flex;
+            justify-content: center;
+            font-family: permanent-marker;
+            font-size: 36px;
+            padding: 10px;
+        }
+
+        .coffee {
+            display: flex;
+            justify-content: center;
+            font-family: fira-code;
+            font-size: 24px;
+            align-items: center;
+
+            p {
+                padding: 0;
+                margin: 0;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+    }
+}

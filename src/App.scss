@@ -5,13 +5,62 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
   @font-face {
     font-family: fira-code;
     src: url(~/Library/Fonts/FiraCode-Medium.ttf);
   }
+
   @font-face {
     font-family: permanent-marker;
     src: url(~/Library/Fonts/PermanentMarker-Regular.ttf)
   }
 }
 
+.Home {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.Products {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: fira-code;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  font-family: fira-code;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.shop-page {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 767px) {
+  body {
+    overflow: hidden;
+  }
+
+  .Home {
+    .shop-page {
+      max-width: 430px;
+    }
+  }
+}
