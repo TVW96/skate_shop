@@ -1,5 +1,5 @@
 import React from 'react';
-import Card_Container from "../Components/Containers/Card_Container";
+import CardContainer from "../Components/Containers/CardContainer";
 import CardGroup from 'react-bootstrap/CardGroup';
 
 import LongBoardsData from "./LongBoardsData";
@@ -7,11 +7,11 @@ import LongBoardsData from "./LongBoardsData";
 const LongBoards = () => {
   return (
     <div>
-        <CardGroup>
-            <Card_Container 
-            cards={LongBoardsData}
-            style={{marginTop: "20px"}} />
-        </CardGroup>
+      <CardGroup>
+        <CardContainer
+          cards={LongBoardsData}
+          style={{ marginTop: "20px" }} />
+      </CardGroup>
     </div>
   )
 }

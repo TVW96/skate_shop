@@ -1,12 +1,9 @@
 import React from 'react'
-import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
-
-import Products_Boards from '../Components/Panels/Boards_Panel';
-import Products_ShortBoards from '../Components/Panels/ShortBoards_Panel';
-import Products_LongBoards from '../Components/Panels/LongBoards_Panel';
+import ProductsBoards from '../Components/Panels/BoardsPanel';
+import ProductsShortBoards from '../Components/Panels/ShortBoardsPanel';
+import ProductsLongBoards from '../Components/Panels/LongBoardsPanel';
 import ShopNav from "../Components/ShopNav";
 import "./Products.scss";
 
@@ -23,13 +20,13 @@ function Products() {
         <div className='products-section'>
           <Row className='categories'>
             <Col className='boards'>
-              <Products_Boards />
+              <ProductsBoards />
             </Col>
             <Col className='shortBoards'>
-              <Products_ShortBoards />
+              <ProductsShortBoards />
             </Col>
             <Col className="longBoards">
-              <Products_LongBoards />
+              <ProductsLongBoards />
             </Col>
           </Row>
         </div>

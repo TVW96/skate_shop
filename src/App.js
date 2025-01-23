@@ -7,16 +7,18 @@ import Home from "./Views/Home";
 import Products from './Views/Products';
 import Contact from './Views/Contact';
 import Footer from "./Components/Footer";
+import Product from './Views/Product';
 
 function App() {
   return (
     <Router>
       <Nav />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
       <Footer />
     </Router>
   );

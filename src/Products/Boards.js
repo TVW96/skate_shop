@@ -1,5 +1,5 @@
 import React from 'react';
-import Card_Container from "../Components/Containers/Card_Container";
+import CardContainer from "../Components/Containers/CardContainer";
 import CardGroup from 'react-bootstrap/CardGroup';
 
 import BoardsData from "./BoardsData";
@@ -7,11 +7,11 @@ import BoardsData from "./BoardsData";
 const Boards = () => {
   return (
     <div>
-        <CardGroup>
-            <Card_Container 
-            cards={BoardsData}
-            style={{marginTop: "20px"}} />
-        </CardGroup>
+      <CardGroup>
+        <CardContainer
+          cards={BoardsData}
+          style={{ marginTop: "20px" }} />
+      </CardGroup>
     </div>
   )
 }
