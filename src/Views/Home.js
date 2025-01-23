@@ -35,7 +35,6 @@ function Home() {
             {/* Row 1 - Boards*/}
             <Row className="justify-content-md-center">
               <Col md="auto" style={{ padding: "20px" }}>
-                <h2 style={{ textDecoration: "underline" }}> Boards</h2>
                 < Boards />
               </Col>
             </Row>
@@ -43,7 +42,6 @@ function Home() {
             {/* Row 2- Short Boards */}
             <Row className="justify-content-md-center">
               <Col md="auto" style={{ padding: "20px" }}>
-                <h2 style={{ textDecoration: "underline" }}> Short Boards</h2>
                 < ShortBoards />
               </Col>
             </Row>
@@ -51,7 +49,6 @@ function Home() {
             {/* Row 3 - Long Boards*/}
             <Row className="justify-content-md-center">
               <Col md="auto" style={{ padding: "20px" }}>
-                <h2 style={{ textDecoration: "underline" }}> Long Boards</h2>
                 < LongBoards />
               </Col>
             </Row>

@@ -10,9 +10,6 @@ const ProductsContainer = ({ cards }) => {
         navigate("/product", { state: { card } });
     };
 
-
-
-
     return (
         <Container className="products-container">
             <Card style={{

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Accordion, Nav } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './ShopNav.scss'; // Import your CSS file
 
 const ShopNav = () => {
@@ -15,7 +16,7 @@ const ShopNav = () => {
         const newHeight = viewportHeight + scrollTop;
         const navTop = 140 - scrollTop;
         let varTop = navTop;
-        if (varTop < 0 ) {
+        if (varTop < 0) {
             varTop = 0;
         }
         let varHeight = newHeight;
@@ -40,16 +41,16 @@ const ShopNav = () => {
     }, []);
 
     return (
-        <div className="shop-nav" style={{ top: `${navTop}px`, height:`${navHeight}px` }}>
+        <div className="shop-nav" style={{ top: `${navTop}px`, height: `${navHeight}px` }}>
             <h2 className="nav-title">Products</h2>
             <Accordion>
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>Decks</Accordion.Header>
                     <Accordion.Body>
                         <Nav className="flex-column">
-                            <Nav.Link href="#boards" className="nav-link">Boards</Nav.Link>
-                            <Nav.Link href="#short-boards" className="nav-link">Short Boards</Nav.Link>
-                            <Nav.Link href="#long-boards" className="nav-link">Long Boards</Nav.Link>
+                            <Nav.Link as={Link} to="/boards" className="nav-link">Boards</Nav.Link>
+                            <Nav.Link as={Link} to="/short-boards" className="nav-link">Short Boards</Nav.Link>
+                            <Nav.Link as={Link} to="/long-boards" className="nav-link">Long Boards</Nav.Link>
                         </Nav>
                     </Accordion.Body>
                 </Accordion.Item>

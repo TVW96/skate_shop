@@ -23,6 +23,7 @@ const Footer = () => {
                         <h5>Follow Us</h5>
                         <div>
                             <a href="https://facebook.com" className="text-light me-3" aria-label="Facebook">
+                                <label><small>No Socials Yet</small></label>
                                 <img src="" alt="" className='' />
                             </a>
                             <a href="https://twitter.com" className="text-light me-3" aria-label="Twitter">
@@ -36,7 +37,7 @@ const Footer = () => {
                 </Row>
                 <Row className="mt-4">
                     <Col className="text-center">
-                        <p className="mb-0">&copy; {new Date().getFullYear()} BoardShop. All rights reserved.</p>
+                        <p className="mb-0">&copy; {new Date().getFullYear()} BoardShop. <i><small>All rights reserved.</small></i></p>
                     </Col>
                 </Row>
             </Container>

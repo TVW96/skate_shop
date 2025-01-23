@@ -6,7 +6,8 @@ import LongBoardsData from "./LongBoardsData";
 
 const LongBoards = () => {
   return (
-    <div>
+    <div style={{ padding: "20px" }}>
+      <h2 style={{ textDecoration: "underline", display: "flex", justifyContent: "center", textAlign: "center", width: "100%" }}>Long Boards</h2>
       <CardGroup>
         <CardContainer
           cards={LongBoardsData}

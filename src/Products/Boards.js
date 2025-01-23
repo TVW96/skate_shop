@@ -6,7 +6,8 @@ import BoardsData from "./BoardsData";
 
 const Boards = () => {
   return (
-    <div>
+    <div style={{ padding: "20px" }}>
+      <h2 style={{ textDecoration: "underline", display: "flex", justifyContent: "center", textAlign: "center", width: "100%" }}> Boards</h2>
       <CardGroup>
         <CardContainer
           cards={BoardsData}

@@ -5,7 +5,8 @@ import ShortBoardsData from "./ShortBoardsData";
 
 const ShortBoards = () => {
   return (
-    <div>
+    <div style={{ padding: "20px" }}>
+      <h2 style={{ textDecoration: "underline", display: "flex", justifyContent: "center", textAlign: "center", width: "100%" }}>Short Boards</h2>
       <CardGroup>
         <CardContainer
           cards={ShortBoardsData}
