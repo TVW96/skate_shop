@@ -1,21 +1,21 @@
 import React from 'react';
 import { Card, Button, Container, Row, Col } from 'react-bootstrap';
+import { useNavigate } from "react-router-dom";
 
 const CardContainer = ({ cards }) => {
-    const onClick = (e) => {
-        e.preventDefault();
-        console.log("Button clicked");
-        // fix logic to load specific product page
-        window.location.href = "/#";
-    }
+    const navigate = useNavigate();
+    const handleClick = (card) => {
+        // Pass the card data to the next page
+        navigate("/product", { state: { card } });
+    };
 
     return (
         <Container className="my-4">
             <Row>
                 {cards.map((card, index) => (
                     <Col key={index} md={4} className="mb-4">
-                        <Card onClick={onClick} style={{ padding: "10px", display: "flex", flexDirection: "column", height: "100%" }}>
-                            <Card.Img variant="top" src={card.imgSrc} className="card-img"
+                        <Card style={{ padding: "10px", display: "flex", flexDirection: "column", height: "100%" }}>
+                            <Card.Img variant="top" src={card.imgSrc} className="card-img" onClick={() => handleClick(card)}
                                 style={{
                                     width: "100%",
                                     height: "200px",
