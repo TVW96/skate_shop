@@ -8,6 +8,7 @@ import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import "./Nav.scss";
 import Logo from "../Assets/skate-logo.png";
+import { Link } from 'react-router-dom';
 
 function nav() {
   return (
@@ -17,8 +18,12 @@ function nav() {
         <Row className="align-items-md-center">
           <Col>
             <Stack direction="horizontal" gap={1}>
-              <img src={Logo} className="logo" alt="logo" />
-              <h1>The Board Shop</h1>
+              <Link to="/">
+                <img src={Logo} className="logo" alt="logo" />
+              </Link>
+              <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
+                <h1>The Board Shop</h1>
+              </Link>
             </Stack>
           </Col>
           <Col>
@@ -48,7 +53,7 @@ function nav() {
           </Col>
         </Row>
       </Container>
-    </Nav>
+    </Nav >
   )
 }
 
