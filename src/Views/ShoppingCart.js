@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import "./ShoppingCart.scss";
 import { CartContext } from "../CartContext";
-import {CardContainer} from "../Components/Containers/CardContainer";
 import { Card, Button, Row, Col } from 'react-bootstrap';
 
 function ShoppingCart() {
