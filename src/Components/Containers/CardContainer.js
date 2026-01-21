@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Button, Container, Row, Col } from 'react-bootstrap';
 import { useNavigate } from "react-router-dom";
+import {CartContext} from "../../CartContext";
 
 const CardContainer = ({ cards }) => {
     const navigate = useNavigate();
@@ -8,6 +9,18 @@ const CardContainer = ({ cards }) => {
         // Pass the card data to the next page
         navigate("/product", { state: { card } });
     };
+    const { cart, addToCart } = React.useContext(CartContext);
+
+    const handleAddToCart = (e, card) => {
+        if (e) e.preventDefault();
+        try{
+            addToCart(card);
+            console.log("Added to cart:", card);
+        } catch(err){
+            console.log(err);
+        }
+        console.log("Cart", cart);
+    }
 
     return (
         <Container className="my-4">
@@ -24,11 +37,9 @@ const CardContainer = ({ cards }) => {
                             />
                             <Card.Body>
                                 <Card.Title>{card.title}</Card.Title>
-                                <Card.Text>
-                                    {card.description}
-                                </Card.Text>
-                                <Button variant="primary" href={card.buttonLink}>
-                                    {card.buttonText}
+                                <Card.Text>{card.description}</Card.Text>
+                                <Button variant="primary" onClick={(e) => handleAddToCart(e, card)}>
+                                    Add to Cart
                                 </Button>
                             </Card.Body>
                         </Card>

@@ -9,7 +9,17 @@
 }
 
 h1 {
-    font-family: fira-code;
+    font-family: fira-code, monospace;
     font-size: 24px;
     font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    font-size: 24px;
+    color: black;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

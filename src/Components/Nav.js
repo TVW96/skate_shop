@@ -34,15 +34,10 @@ function nav() {
           </Col>
           <Col>
             <Stack direction="horizontal" gap={3}>
-              <Nav.Item>
-                <Nav.Link href="/">Home</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link href="/products">Products</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link href="/contact">Contact</Nav.Link>
-              </Nav.Item>
+                <Link to="/">Home</Link>
+                <Link to="/products">Products</Link>
+                <Link to="/contact">Contact</Link>
+                <Link to="/cart">Cart</Link>
             </Stack>
           </Col>
         </Row>

@@ -1,6 +1,7 @@
 // Footer.js
 import React from 'react';
 import { Container, Row, Col, Nav } from 'react-bootstrap';
+import {Link} from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -14,24 +15,24 @@ const Footer = () => {
                     <Col md={4} className="mb-3 mb-md-0">
                         <h5>Quick Links</h5>
                         <Nav className="flex-column">
-                            <Nav.Link href="/" className="text-light">Home</Nav.Link>
-                            <Nav.Link href="/products" className="text-light">Products</Nav.Link>
-                            <Nav.Link href="/contact" className="text-light">Contact</Nav.Link>
+                            <Link to="/" className="text-light">Home</Link>
+                            <Link to="/products" className="text-light">Products</Link>
+                            <Link to="/contact" className="text-light">Contact</Link>
                         </Nav>
                     </Col>
                     <Col md={4}>
                         <h5>Follow Us</h5>
                         <div>
-                            <a href="https://facebook.com" className="text-light me-3" aria-label="Facebook">
+                            <Link to="https://facebook.com" className="text-light me-3" aria-label="Facebook">
                                 <label><small>No Socials Yet</small></label>
                                 <img src="" alt="" className='' />
-                            </a>
-                            <a href="https://twitter.com" className="text-light me-3" aria-label="Twitter">
+                            </Link>
+                            <Link to="https://twitter.com" className="text-light me-3" aria-label="Twitter">
                                 <img src="" alt="" className='' />
-                            </a>
-                            <a href="https://instagram.com" className="text-light" aria-label="Instagram">
+                            </Link>
+                            <Link to="https://instagram.com" className="text-light" aria-label="Instagram">
                                 <img src="" alt="" className='' />
-                            </a>
+                            </Link>
                         </div>
                     </Col>
                 </Row>
