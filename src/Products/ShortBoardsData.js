@@ -4,6 +4,7 @@ import Deck3 from "../Assets/powell_peralta_ripper.jpg";
 
   const ShortBoardsData = [
     {
+        id: 1,
         imgSrc: Deck1,
         title: 'Blacklabel - " Elephant Block" Deck',
         description: 'This is a description for card 1.',
@@ -11,6 +12,7 @@ import Deck3 from "../Assets/powell_peralta_ripper.jpg";
         buttonText: 'Add to Cart'
     },
     {
+        id: 2,
         imgSrc: Deck2,
         title: 'Polar - "Everything" Deck',
         description: 'This is a description for card 2.',
@@ -18,6 +20,7 @@ import Deck3 from "../Assets/powell_peralta_ripper.jpg";
         buttonText: 'Add to Cart'
     },
     {
+        id: 3,
         imgSrc: Deck3,
         title: 'Powell Peralta - "Ripper" Deck',
         description: 'This is a description for card 3.',

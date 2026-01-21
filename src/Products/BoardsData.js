@@ -4,7 +4,7 @@ import Deck3 from "../Assets/Deck3.jpg";
 
 const BoardsData = [
 {
-    id: 1, // Add this
+    id: 1,
     imgSrc: Deck1,
     title: 'Faction - " The Hyper Vacation" Deck',
     description: 'This is a description for card 1.',
@@ -12,7 +12,7 @@ const BoardsData = [
     buttonText: 'Add to Cart'
 },
 {
-    id: 2, // Add this
+    id: 2,
     imgSrc: Deck2,
     title: 'Studio - "Beat Drop" Deck',
     description: 'This is a description for card 2.',
@@ -20,7 +20,7 @@ const BoardsData = [
     buttonText: 'Add to Cart'
 },
 {
-    id: 3, // Add this
+    id: 3,
     imgSrc: Deck3,
     title: 'Faction - "Flying Dogs" Deck',
     description: 'This is a description for card 3.',

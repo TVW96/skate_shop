@@ -4,6 +4,7 @@ import Deck3 from "../Assets/LandyYachtz_SwitchBlade.jpg";
 
 const LongBoardsData = [
     {
+        id: 1,
         imgSrc: Deck1,
         title: 'Faction - " The Hyper Vacation" Deck',
         description: 'This is a description for card 1.',
@@ -11,6 +12,7 @@ const LongBoardsData = [
         buttonText: 'Add to Cart'
     },
     {
+        id: 2,
         imgSrc: Deck2,
         title: 'Studio - "Beat Drop" Deck',
         description: 'This is a description for card 2.',
@@ -18,6 +20,7 @@ const LongBoardsData = [
         buttonText: 'Add to Cart'
     },
     {
+        id: 3,
         imgSrc: Deck3,
         title: 'Faction - "Flying Dogs" Deck',
         description: 'This is a description for card 3.',
